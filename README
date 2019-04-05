@@ -1,0 +1,14 @@
+This argo package aims to generate now-casting estimation of CDC's ILI in real time. The methodology is based on the paper 'Accurate estimation of influenza epidemics using Google search data via ARGO' (see reference).
+
+**** Install ****
+Use standard installation of local R package. Note that dependent packages (see DESCRIPTION) must be installed first from CRAN:
+~$ R CMD INSTALL argo.tar.gz
+
+**** Reproducing the paper ****
+Run main.R script file, which is contained in the zip. The package output will be slightly different from the results presented in the paper, due to the update of data and the random variation of cross-validation. In any case, the difference is small and the message is consistent.
+
+**** Note for developer ****
+The package is still under development. While the meat part is well documented, the generating code of summary tables and graphics is not so clean to read. Effort is continuously made to ensure a better next-version release.
+
+**** Contact ****
+Shihao Yang (shihaoyang@g.harvard.edu)
