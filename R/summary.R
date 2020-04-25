@@ -34,7 +34,7 @@ summary_argo <- function(GFT_xts, model_names, legend_names, periods,
   corr_by_period <- function(x,y, periods){
     sapply(periods, function(p) {
       re <- try(cor(x[p],y[p], use="everything"), silent = T)#"complete.obs"
-      if(class(re)=="try-error")
+      if(class(re)[1]=="try-error")
         return(NaN)
       else
         return(re)
@@ -44,7 +44,7 @@ summary_argo <- function(GFT_xts, model_names, legend_names, periods,
   RMSE_by_period <- function(x,y, periods){
     sapply(periods, function(p) {
       re <- try(sqrt(mean((x[p]-y[p])^2, na.rm=FALSE)),silent = T)
-      if(class(re)=="try-error")
+      if(class(re)[1]=="try-error")
         return(NaN)
       else
         return(re)
@@ -55,7 +55,7 @@ summary_argo <- function(GFT_xts, model_names, legend_names, periods,
     x <- x_truth
     sapply(periods, function(p) {
       re <- try(sqrt(mean((x[p]-y[p])^2 / x_truth[p]^2, na.rm=FALSE)),silent = T)
-      if(class(re)=="try-error")
+      if(class(re)[1]=="try-error")
         return(NaN)
       else
         return(re)
@@ -65,7 +65,7 @@ summary_argo <- function(GFT_xts, model_names, legend_names, periods,
   ABSE_by_period <- function(x,y, periods){
     sapply(periods, function(p) {
       re <- try(mean(abs(x[p]-y[p]), na.rm=FALSE),silent = T)
-      if(class(re)=="try-error")
+      if(class(re)[1]=="try-error")
         return(NaN)
       else
         return(re)
@@ -75,7 +75,7 @@ summary_argo <- function(GFT_xts, model_names, legend_names, periods,
   corr_martingale_diff <- function(x,y, periods){
     sapply(periods, function(p) {
       re <- try(cor(diff(x[p])[-1],diff(y[p])[-1], use="everything"), silent = T)#"complete.obs"
-      if(class(re)=="try-error")
+      if(class(re)[1]=="try-error")
         return(NaN)
       else
         return(re)
@@ -86,7 +86,7 @@ summary_argo <- function(GFT_xts, model_names, legend_names, periods,
   MAPE_by_period <- function(x_truth,y, periods){
     sapply(periods, function(p) {
       re <- try(mean(abs(x_truth[p]-y[p])/x_truth[p], na.rm=FALSE),silent = T)
-      if(class(re)=="try-error")
+      if(class(re)[1]=="try-error")
         return(NaN)
       else
         return(re)

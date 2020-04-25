@@ -19,6 +19,8 @@
 #' @param alpha penalty between lasso and ridge, alpha=1 represents lasso,
 #' alpha=0 represents ridge, alpha=NA represents no penalty
 #' @param mc.cores number of cores to compute argo in parallel
+#' @param schedule list to specify prediction schedule. Default to have \code{y_gap} as 1, and \code{forecast} as 0, 
+#' i.e., nowcasting with past week ILI available from CDC.
 #'
 #' @return A list of following named objects
 #' \itemize{
@@ -47,9 +49,14 @@
 #' }
 #' @export
 argo <- function(data, exogen=xts::xts(NULL), N_lag=1:52, N_training=104,
-                 alpha=1, use_all_previous=FALSE, mc.cores=1){
+                 alpha=1, use_all_previous=FALSE, mc.cores=1, schedule = list()){
 
-  schedule <- list(y_gap=1, forecast=0)
+  if(is.null(schedule$y_gap)){
+    schedule$y_gap <- 1 # default information gap is 1
+  }
+  if(is.null(schedule$forecast)){
+    schedule$forecast <- 0 # default is now-cast
+  }
 
   parm <- list(N_lag = N_lag, N_training = N_training,
                alpha = alpha, use_all_previous = use_all_previous,

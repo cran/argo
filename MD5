@@ -1,11 +1,11 @@
-a711d7e04be49de2d3ac242e8d7c7dd3 *DESCRIPTION
+2b153071b50de26cae526f09801d70d9 *DESCRIPTION
 267aef17a52702fc7962f0eaae83556a *NAMESPACE
 eb5b85af2210269c51adbcc37ee26563 *R/boot.R
-70f7526360ecd24e237f22543ab730a6 *R/constructor.R
-4a16736b72b13a5747c471d3f59e16fa *R/dataparsing.R
+8aace799bba8ecd9e4d896f9a5ff06a3 *R/constructor.R
+7470399c0b228c7d578a90ba8d98523b *R/dataparsing.R
 405f0e708745438638bb472d2774305b *R/main.R
 d03bba171f75668a7ea95a053f2b400e *R/plot.R
-4f751f529ed9dc0982701ed77d4acc43 *R/summary.R
+27b48b86db78275a1e13903f9970cf7d *R/summary.R
 b4d7ff1048859c229735b9880f6edc1f *R/util.R
 ce0a07623c65d274e426a4bea48b792d *README
 e3bbd6d093f5f7d45aa35dbc49135d3d *inst/extdata/GFT.csv
@@ -17,7 +17,7 @@ e3052188c58e19fa2e4fbba2168d2d5b *inst/regiondata/GFT.txt
 ccba22a5b26532be51c1ee7687685475 *inst/regiondata/Population.csv
 494cc6f749d7c176c7fab440f8d2a5a2 *inst/regiondata/ili20161121/ILINet_nat.csv
 ba262afb07738f8e007e9702fcea3ec8 *inst/regiondata/ili20161121/ILINet_regional.csv
-2c271d07c9a1f95213bc3afb6502737e *man/argo.Rd
+48b9a71c4baf2e5778689fa43fd6333c *man/argo.Rd
 4f35723702bf0219119ef0ba198608e9 *man/argo2.Rd
 cc04d51ab0eeed6d290150c1b8168cc4 *man/argo2_main.Rd
 56461aef281106c1ab391e3d69933b88 *man/argo_main.Rd
@@ -27,7 +27,7 @@ db80911170214537f09279c120317c26 *man/gt.parser.pub.api.Rd
 440c7f3876234f11852a0568630f860a *man/gt.parser.pub.web.Rd
 ac69f033c0f9482136833245f5fd3146 *man/heatmap_argo.Rd
 5164884b6f59d7afe303dd3f5844ae0a *man/heatmap_cor.Rd
-ea0cfb3bf6babc5421b62933714e6c69 *man/load_data.Rd
+0bda247588ad1ef7b36585dd687b6e91 *man/load_data.Rd
 193ee4a4955ab5ece850f8718de08cc4 *man/load_reg_data.Rd
 8d7c49b4e8003a053f7ca82c2b361aa2 *man/logit.Rd
 2165c0fa480f1902c1dfdc3cfff90f86 *man/logit_inv.Rd

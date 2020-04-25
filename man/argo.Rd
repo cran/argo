@@ -5,7 +5,8 @@
 \title{Construct ARGO object}
 \usage{
 argo(data, exogen = xts::xts(NULL), N_lag = 1:52, N_training = 104,
-  alpha = 1, use_all_previous = FALSE, mc.cores = 1)
+  alpha = 1, use_all_previous = FALSE, mc.cores = 1,
+  schedule = list())
 }
 \arguments{
 \item{data}{response variable as xts, last element can be NA. If the response
@@ -27,6 +28,9 @@ alpha=0 represents ridge, alpha=NA represents no penalty}
 (when \code{TRUE}) or "a sliding window" (when \code{FALSE}) for training}
 
 \item{mc.cores}{number of cores to compute argo in parallel}
+
+\item{schedule}{list to specify prediction schedule. Default to have \code{y_gap} as 1, and \code{forecast} as 0, 
+i.e., nowcasting with past week ILI available from CDC.}
 }
 \value{
 A list of following named objects

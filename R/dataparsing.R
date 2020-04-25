@@ -29,10 +29,8 @@
 #' @return A list of following named xts objects if \code{type=="extdata"}
 #' \itemize{
 #'  \item \code{GC10} Google Correlate trained with ILI available as of 2010.
-#'    Available online at \url{https://www.google.com/trends/correlate/search?e=id:20xKcnNqHrk&t=weekly}
+#'    Google Correlate has been deprecated by Google as of Dec 2019 and is no longer publicly available.
 #'  \item \code{GC09} Google Correlate trained with ILI available as of 2009.
-#'    Not directly available online, you have to manually input ILI time series
-#'    at \url{https://www.google.com/trends/correlate}
 #'  \item \code{GT} Google Trends data for search queries identified using Google Correlate.
 #'    Not directly available online, you have to manually input query terms
 #'    at \url{https://www.google.com/trends}
@@ -57,11 +55,11 @@
 #'  Athenahealth partner healthcare providers.
 #'  \item \code{ili_unrevised} Historical unrevised ILI activity level.
 #'    The unrevised ILI published on week ZZ of season XXXX-YYYY is available at
-#'    \url{www.cdc.gov/flu/weekly/weeklyarchivesXXXX-YYYY/data/senAllregtZZ.html}
-#'    or \url{.htm}. For example, original ILI report for week 7 of season 2015-2016 is available at
-#'    \url{www.cdc.gov/flu/weekly/weeklyarchives2015-2016/data/senAllregt07.html},
+#'    \code{www.cdc.gov/flu/weekly/weeklyarchivesXXXX-YYYY/data/senAllregtZZ.html}
+#'    or \code{.htm}. For example, original ILI report for week 7 of season 2015-2016 is available at
+#'    \url{http://www.cdc.gov/flu/weekly/weeklyarchives2015-2016/data/senAllregt07.html},
 #'    and original ILI report for week 50 of season 2012-2013 is available at
-#'    \url{www.cdc.gov/flu/ weekly/weeklyarchives2012-2013/data/senAllregt50.htm}
+#'    \url{http://www.cdc.gov/flu/weekly/weeklyarchives2012-2013/data/senAllregt50.htm}
 #' }
 #'
 #' @references
@@ -192,7 +190,7 @@ parse_unrevised_ili <- function(type = "extdata", ili.weighted=TRUE){
                        sprintf("%.2d", ili_idx$WEEK[i]),".htm")
     }
     ili_table <- try(readHTMLTable(theurl)[[1]], silent = TRUE)
-    if(class(ili_table)=="try-error"){
+    if(class(ili_table)[1]=="try-error"){
       missing_data_id <- c(missing_data_id, j)
       next
     }
@@ -386,8 +384,9 @@ load_reg_data <- function(gt.folder, ili.folder, population.file, gft.file, gt.p
 
   GTdata_week.state <- tapply(GTdata_week, state.info, function(gt.eachstate){
     tab <- do.call(merge, gt.eachstate)
-    tab[,!grepl("1",colnames(tab))]
+    tab[,!grepl("\\.1$",colnames(tab))]
   })
+  names(GTdata_week.state)[names(GTdata_week.state) == "US-NY-501"] <- "501"
 
   if(any(nchar(names(GTdata_week.state)) > 5)){
     names(GTdata_week.state) <- sapply(names(GTdata_week.state), function(x){
