@@ -4,9 +4,17 @@
 \alias{bootstrap_relative_efficiency}
 \title{bootstrap relative efficiency confidence interval}
 \usage{
-bootstrap_relative_efficiency(pred_data, model_good, model_bench, l = 50,
-  N = 10000, truth = "CDC.data", sim = "geom", conf = 0.95,
-  type = c("mse", "mape", "mae", "mspe", "rmse", "rmspe"))
+bootstrap_relative_efficiency(
+  pred_data,
+  model_good,
+  model_bench,
+  l = 50,
+  N = 10000,
+  truth = "CDC.data",
+  sim = "geom",
+  conf = 0.95,
+  type = c("mse", "mape", "mae", "mspe", "rmse", "rmspe")
+)
 }
 \arguments{
 \item{pred_data}{A matrix that contains the truth vector and the predictions.

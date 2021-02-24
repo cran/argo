@@ -4,8 +4,13 @@
 \alias{load_reg_data}
 \title{Parsing of raw data for regional ILI estimation}
 \usage{
-load_reg_data(gt.folder, ili.folder, population.file, gft.file,
-  gt.parser = gt.parser.pub.web)
+load_reg_data(
+  gt.folder,
+  ili.folder,
+  population.file,
+  gft.file,
+  gt.parser = gt.parser.pub.web
+)
 }
 \arguments{
 \item{gt.folder}{folder with all Google Trends data}

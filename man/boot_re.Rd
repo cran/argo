@@ -4,9 +4,18 @@
 \alias{boot_re}
 \title{wrapper for bootstrap relative efficiency confidence interval}
 \usage{
-boot_re(pred_data, period.all, model_good, bench.all, type,
-  truth = "CDC.data", l = 50, N = 10000, sim = "geom",
-  conf = 0.95)
+boot_re(
+  pred_data,
+  period.all,
+  model_good,
+  bench.all,
+  type,
+  truth = "CDC.data",
+  l = 50,
+  N = 10000,
+  sim = "geom",
+  conf = 0.95
+)
 }
 \arguments{
 \item{pred_data}{A matrix that contains the truth vector and the predictions.

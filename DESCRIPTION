@@ -2,18 +2,18 @@ Package: argo
 Type: Package
 Title: Accurate Estimation of Influenza Epidemics using Google Search
         Data
-Version: 2.0.2
-Date: 2020-04-25
+Version: 3.0.1
+Date: 2021-02-20
 Author: Shaoyang Ning, Shihao Yang, S. C. Kou
 Maintainer: Shihao Yang <shihao.yang@isye.gatech.edu>
-Description: Augmented Regression with General Online data (ARGO) for accurate estimation of influenza epidemics in United States on both national level and regional level. It replicates the method introduced in paper Yang, S., Santillana, M. and Kou, S.C. (2015) <doi:10.1073/pnas.1515373112> and Ning, S., Yang, S. and Kou, S.C. (2019) <doi:10.1038/s41598-019-41559-6>.
+Description: Augmented Regression with General Online data (ARGO) for accurate estimation of influenza epidemics in United States on national level, regional level and state level. It replicates the method introduced in paper Yang, S., Santillana, M. and Kou, S.C. (2015) <doi:10.1073/pnas.1515373112>; Ning, S., Yang, S. and Kou, S.C. (2019) <doi:10.1038/s41598-019-41559-6>; Yang, S., Ning, S. and Kou, S.C. (2021) <doi:10.1038/s41598-021-83084-5>.
 License: GPL-2
 LazyData: TRUE
 Imports: xts, glmnet, zoo, XML, xtable, Matrix, boot
 Suggests: testthat
 Encoding: UTF-8
-RoxygenNote: 6.1.1
+RoxygenNote: 7.1.1
 NeedsCompilation: no
-Packaged: 2020-04-25 12:51:30 UTC; shihaoyang
+Packaged: 2021-02-24 01:18:28 UTC; shihaoyang
 Repository: CRAN
-Date/Publication: 2020-04-25 15:50:02 UTC
+Date/Publication: 2021-02-24 06:30:02 UTC

@@ -24,5 +24,5 @@ parsed_data <- parse_gt_weekly(gt.folder)
 
 }
 \references{
-Yang, S., Santillana, M., & Kou, S. C. (2015). Accurate estimation of influenza epidemics using Google search data via ARGO. Proceedings of the National Academy of Sciences, \href{https://dx.doi.org/10.1073/pnas.1515373112}{doi: 10.1073/pnas.1515373112}.
+Yang, S., Santillana, M., & Kou, S. C. (2015). Accurate estimation of influenza epidemics using Google search data via ARGO. Proceedings of the National Academy of Sciences. <doi:10.1073/pnas.1515373112>.
 }

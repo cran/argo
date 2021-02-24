@@ -24,7 +24,7 @@
 #'
 #' @return A list of summary tables for the input periods, including RMSE, MAE, MAPE, corr
 #' @references
-#' Yang, S., Santillana, M., & Kou, S. C. (2015). Accurate estimation of influenza epidemics using Google search data via ARGO. Proceedings of the National Academy of Sciences, \href{https://dx.doi.org/10.1073/pnas.1515373112}{doi: 10.1073/pnas.1515373112}.
+#' Yang, S., Santillana, M., & Kou, S. C. (2015). Accurate estimation of influenza epidemics using Google search data via ARGO. Proceedings of the National Academy of Sciences. <doi:10.1073/pnas.1515373112>.
 #' Shaoyang Ning, Shihao Yang, S. C. Kou. Accurate Regional Influenza Epidemics Tracking Using Internet Search Data. Scientific Reports
 #'
 #' @export
@@ -85,7 +85,9 @@ summary_argo <- function(GFT_xts, model_names, legend_names, periods,
 
   MAPE_by_period <- function(x_truth,y, periods){
     sapply(periods, function(p) {
-      re <- try(mean(abs(x_truth[p]-y[p])/x_truth[p], na.rm=FALSE),silent = T)
+      ape <- abs(x_truth[p]-y[p])/x_truth[p]
+      ape <- ape[x_truth[p] > 0]
+      re <- try(mean(ape, na.rm=FALSE),silent = T)
       if(class(re)[1]=="try-error")
         return(NaN)
       else

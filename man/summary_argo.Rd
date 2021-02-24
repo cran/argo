@@ -4,8 +4,13 @@
 \alias{summary_argo}
 \title{performance summary of ARGO applied on CDC's ILI data}
 \usage{
-summary_argo(GFT_xts, model_names, legend_names, periods,
-  whole_period = "2009-03/2015-10")
+summary_argo(
+  GFT_xts,
+  model_names,
+  legend_names,
+  periods,
+  whole_period = "2009-03/2015-10"
+)
 }
 \arguments{
 \item{GFT_xts}{dataframe with all predicted values}
@@ -39,6 +44,6 @@ summary_argo(
 
 }
 \references{
-Yang, S., Santillana, M., & Kou, S. C. (2015). Accurate estimation of influenza epidemics using Google search data via ARGO. Proceedings of the National Academy of Sciences, \href{https://dx.doi.org/10.1073/pnas.1515373112}{doi: 10.1073/pnas.1515373112}.
+Yang, S., Santillana, M., & Kou, S. C. (2015). Accurate estimation of influenza epidemics using Google search data via ARGO. Proceedings of the National Academy of Sciences. <doi:10.1073/pnas.1515373112>.
 Shaoyang Ning, Shihao Yang, S. C. Kou. Accurate Regional Influenza Epidemics Tracking Using Internet Search Data. Scientific Reports
 }

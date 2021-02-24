@@ -4,8 +4,13 @@
 \alias{argo2_main}
 \title{main function for argo2}
 \usage{
-argo2_main(gt.folder, ili.folder, population.file, gft.file,
-  save.folder = NULL)
+argo2_main(
+  gt.folder,
+  ili.folder,
+  population.file,
+  gft.file,
+  save.folder = NULL
+)
 }
 \arguments{
 \item{gt.folder}{folder with Google Trends files, which should be thousands of csv file such as "US-MA_fever cough.csv" or "US-NY_cold or flu.csv"}

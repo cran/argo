@@ -11,4 +11,4 @@ Run main.R script file, which is contained in the zip. The package output will b
 The package is still under development. While the meat part is well documented, the generating code of summary tables and graphics is not so clean to read. Effort is continuously made to ensure a better next-version release.
 
 **** Contact ****
-Shihao Yang (shihaoyang@g.harvard.edu)
+Shihao Yang (shihao.yang@isye.gatech.edu)

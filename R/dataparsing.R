@@ -33,23 +33,22 @@
 #'  \item \code{GC09} Google Correlate trained with ILI available as of 2009.
 #'  \item \code{GT} Google Trends data for search queries identified using Google Correlate.
 #'    Not directly available online, you have to manually input query terms
-#'    at \url{https://www.google.com/trends}
+#'    at \url{https://trends.google.com/trends/}
 #'  \item \code{CDC} CDC's ILI dataset.
-#'    Available online at \url{http://gis.cdc.gov/grasp/fluview/fluportaldashboard.html}
+#'    Available online at \url{https://gis.cdc.gov/grasp/fluview/fluportaldashboard.html}
 #'  \item \code{GFT} Google Flu Trend (historical predictions).
-#'    Available online at \url{https://www.google.org/flutrends}
 #' }
 #'
 #' A list of following named xts objects if \code{type=="athdata"}
 #' \itemize{
 #'  \item \code{GT} Google Trends data for search queries identified.
 #'    Not directly available online, you have to manually input query terms
-#'    at \url{https://www.google.com/trends}
+#'    at \url{https://trends.google.com/trends/}
 #'  \item \code{CDC} CDC's ILI dataset.
-#'    Available online at \url{http://gis.cdc.gov/grasp/fluview/fluportaldashboard.html}
+#'    Available online at \url{https://gis.cdc.gov/grasp/fluview/fluportaldashboard.html}
 #'  \item \code{ili_idx} the indexing information that includes the week number and year
 #'  number, the date of ending Saturday, and the season number
-#'    Available online at \url{http://www.cdc.gov/flu/weekly/}
+#'    Available online at \url{https://www.cdc.gov/flu/weekly/}
 #'  \item \code{ATH} Athenahealth data that includes the proportion of "Flu Visit",
 #'  "ILI Visit", and "Unspecified Viral or ILI Visit" compared to total number of visit to the
 #'  Athenahealth partner healthcare providers.
@@ -57,13 +56,13 @@
 #'    The unrevised ILI published on week ZZ of season XXXX-YYYY is available at
 #'    \code{www.cdc.gov/flu/weekly/weeklyarchivesXXXX-YYYY/data/senAllregtZZ.html}
 #'    or \code{.htm}. For example, original ILI report for week 7 of season 2015-2016 is available at
-#'    \url{http://www.cdc.gov/flu/weekly/weeklyarchives2015-2016/data/senAllregt07.html},
+#'    \url{https://www.cdc.gov/flu/weekly/weeklyarchives2015-2016/data/senAllregt07.html},
 #'    and original ILI report for week 50 of season 2012-2013 is available at
-#'    \url{http://www.cdc.gov/flu/weekly/weeklyarchives2012-2013/data/senAllregt50.htm}
+#'    \url{https://www.cdc.gov/flu/weekly/weeklyarchives2012-2013/data/senAllregt50.htm}
 #' }
 #'
 #' @references
-#' Yang, S., Santillana, M., & Kou, S. C. (2015). Accurate estimation of influenza epidemics using Google search data via ARGO. Proceedings of the National Academy of Sciences, \href{https://dx.doi.org/10.1073/pnas.1515373112}{doi: 10.1073/pnas.1515373112}.
+#' Yang, S., Santillana, M., & Kou, S. C. (2015). Accurate estimation of influenza epidemics using Google search data via ARGO. Proceedings of the National Academy of Sciences. <doi:10.1073/pnas.1515373112>.
 #'
 #' @import utils
 #'
@@ -150,7 +149,7 @@ load_data <- function(type = "extdata", ili.weighted=TRUE) {
 #' @param type the type of data folder to parse
 #' @param ili.weighted indicator to use weighted ILI or not
 #' @references
-#' Yang, S., Santillana, M., & Kou, S. C. (2015). Accurate estimation of influenza epidemics using Google search data via ARGO. Proceedings of the National Academy of Sciences, \href{https://dx.doi.org/10.1073/pnas.1515373112}{doi: 10.1073/pnas.1515373112}.
+#' Yang, S., Santillana, M., & Kou, S. C. (2015). Accurate estimation of influenza epidemics using Google search data via ARGO. Proceedings of the National Academy of Sciences. <doi:10.1073/pnas.1515373112>.
 #' @import xts XML
 #' @examples
 #'
@@ -226,7 +225,7 @@ parse_unrevised_ili <- function(type = "extdata", ili.weighted=TRUE){
 #' Parsing of Google Trends data
 #' @param folder folder with weekly Google Trends file
 #' @references
-#' Yang, S., Santillana, M., & Kou, S. C. (2015). Accurate estimation of influenza epidemics using Google search data via ARGO. Proceedings of the National Academy of Sciences, \href{https://dx.doi.org/10.1073/pnas.1515373112}{doi: 10.1073/pnas.1515373112}.
+#' Yang, S., Santillana, M., & Kou, S. C. (2015). Accurate estimation of influenza epidemics using Google search data via ARGO. Proceedings of the National Academy of Sciences. <doi:10.1073/pnas.1515373112>.
 #' @import xts
 #' @import zoo
 #'
@@ -440,6 +439,7 @@ load_reg_data <- function(gt.folder, ili.folder, population.file, gft.file, gt.p
         abbv <- j
       }
       ili_state_this <- ili_state_raw[ili_state_raw$REGION==j, c("REGION", "YEAR", "WEEK", "X.UNWEIGHTED.ILI")]
+      ili_state_this$X.UNWEIGHTED.ILI[ili_state_this$X.UNWEIGHTED.ILI == "X"] <- ""
       ili_state_this$X.UNWEIGHTED.ILI <- as.numeric(as.character(ili_state_this$X.UNWEIGHTED.ILI))
       ili_state_this <- merge(ili_state_this, ili_idx, by=c("YEAR", "WEEK"))
       ili_state_xts <- xts(ili_state_this$X.UNWEIGHTED.ILI, ili_state_this$DATE)

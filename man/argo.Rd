@@ -4,9 +4,16 @@
 \alias{argo}
 \title{Construct ARGO object}
 \usage{
-argo(data, exogen = xts::xts(NULL), N_lag = 1:52, N_training = 104,
-  alpha = 1, use_all_previous = FALSE, mc.cores = 1,
-  schedule = list())
+argo(
+  data,
+  exogen = xts::xts(NULL),
+  N_lag = 1:52,
+  N_training = 104,
+  alpha = 1,
+  use_all_previous = FALSE,
+  mc.cores = 1,
+  schedule = list()
+)
 }
 \arguments{
 \item{data}{response variable as xts, last element can be NA. If the response
@@ -65,5 +72,5 @@ argo_result2 <- argo(GFT_xts, exogen = randomx)
 }
 }
 \references{
-Yang, S., Santillana, M., & Kou, S. C. (2015). Accurate estimation of influenza epidemics using Google search data via ARGO. Proceedings of the National Academy of Sciences, \href{https://dx.doi.org/10.1073/pnas.1515373112}{doi: 10.1073/pnas.1515373112}.
+Yang, S., Santillana, M., & Kou, S. C. (2015). Accurate estimation of influenza epidemics using Google search data via ARGO. Proceedings of the National Academy of Sciences. <doi:10.1073/pnas.1515373112>.
 }

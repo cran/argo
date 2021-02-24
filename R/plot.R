@@ -25,8 +25,7 @@ plot_xts <- function (x, y = NULL, type = "l", auto.grid = TRUE, major.ticks = "
   dots <- list(...)
   if (axes) {
     if (minor.ticks)
-      axis(1, at = xycoords$x, labels = FALSE, col = "#BBBBBB",
-           ...)
+      axis(1, at = xycoords$x, labels = FALSE, col = "#BBBBBB")
     axis(1, at = xycoords$x[ep], labels = names(ep), las = 1,
          lwd = 1, mgp = c(3, 2, 0), ...)
     axis(2, ...)
