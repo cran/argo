@@ -28,7 +28,7 @@ main function that reproduce the results in ARGO2 paper
 }
 \examples{
 
-\donttest{
+\dontrun{
 download.file("https://scholar.harvard.edu/files/syang/files/gt2016-10-24.zip",
 file.path(tempdir(), "gt2016-10-24.zip"))
 unzip(file.path(tempdir(), "gt2016-10-24.zip"), exdir = tempdir())

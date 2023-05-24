@@ -1,9 +1,9 @@
-cb459f684f0ee59777cf5d663bee8abe *DESCRIPTION
+5a944e71e7f904d7b12459315f22abba *DESCRIPTION
 b43c7872c930e713cbba76d9c3cddb77 *NAMESPACE
 eb5b85af2210269c51adbcc37ee26563 *R/boot.R
 4a51605f68c013b9227ae2eaa225a039 *R/constructor.R
 06560125a106273461f3f85c913aef13 *R/dataparsing.R
-24a2fd8615912234e4815a009a83b2a6 *R/main.R
+7862ee47f8cf913637909d537ed4ee45 *R/main.R
 179d0e9d38ed2d024296fbabb8ca7e8c *R/plot.R
 659131eefbd0e918c5bff4b9c9dec413 *R/summary.R
 b4d7ff1048859c229735b9880f6edc1f *R/util.R
@@ -19,7 +19,7 @@ ccba22a5b26532be51c1ee7687685475 *inst/regiondata/Population.csv
 ba262afb07738f8e007e9702fcea3ec8 *inst/regiondata/ili20161121/ILINet_regional.csv
 5103e86d4cd6c20a8d4fb9d2286ab5a1 *man/argo.Rd
 4f35723702bf0219119ef0ba198608e9 *man/argo2.Rd
-49f4d2651d036c14964cee48e9a3b8e8 *man/argo2_main.Rd
+8101e2eb8c9f508ccbd42f7886ac2ec3 *man/argo2_main.Rd
 56461aef281106c1ab391e3d69933b88 *man/argo_main.Rd
 4e97985da3ae15c94e4c78d9aeff9334 *man/argox_main.Rd
 f62d6f556332305562cc38d29abd9e97 *man/boot_re.Rd

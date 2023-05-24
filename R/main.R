@@ -194,7 +194,7 @@ argo_main <- function(save.folder=NULL){
 #'
 #' @examples
 #'
-#' \donttest{
+#' \dontrun{
 #' download.file("https://scholar.harvard.edu/files/syang/files/gt2016-10-24.zip",
 #' file.path(tempdir(), "gt2016-10-24.zip"))
 #' unzip(file.path(tempdir(), "gt2016-10-24.zip"), exdir = tempdir())
