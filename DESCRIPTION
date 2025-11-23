@@ -2,9 +2,11 @@ Package: argo
 Type: Package
 Title: Accurate Estimation of Influenza Epidemics using Google Search
         Data
-Version: 3.0.2
-Date: 2023-05-23
-Author: Shaoyang Ning, Shihao Yang, S. C. Kou
+Version: 3.0.3
+Date: 2025-11-21
+Author: Shaoyang Ning [aut],
+  Shihao Yang [aut, cre],
+  S. C. Kou [aut]
 Maintainer: Shihao Yang <shihao.yang@isye.gatech.edu>
 Description: Augmented Regression with General Online data (ARGO) for accurate estimation of influenza epidemics in United States on national level, regional level and state level. It replicates the method introduced in paper Yang, S., Santillana, M. and Kou, S.C. (2015) <doi:10.1073/pnas.1515373112>; Ning, S., Yang, S. and Kou, S.C. (2019) <doi:10.1038/s41598-019-41559-6>; Yang, S., Ning, S. and Kou, S.C. (2021) <doi:10.1038/s41598-021-83084-5>.
 License: GPL-2
@@ -13,6 +15,16 @@ Suggests: testthat
 Encoding: UTF-8
 RoxygenNote: 7.1.1
 NeedsCompilation: no
-Packaged: 2023-05-23 15:11:19 UTC; shihaoyang
+Authors@R: c(person(given = "Shaoyang",
+                family = "Ning",
+                role = "aut"),
+                person(given = "Shihao",
+                family = "Yang",
+                role = c("aut", "cre"),
+                email = "shihao.yang@isye.gatech.edu"),
+                person(given = c("S.", "C."),
+                family = "Kou",
+                role = "aut"))
+Packaged: 2025-11-23 04:58:41 UTC; shihaoyang
 Repository: CRAN
-Date/Publication: 2023-05-24 11:20:14 UTC
+Date/Publication: 2025-11-23 16:50:02 UTC

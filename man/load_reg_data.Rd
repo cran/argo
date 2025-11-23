@@ -28,7 +28,7 @@ Parsing of raw data for regional ILI estimation
 }
 \examples{
 \donttest{
-download.file("https://scholar.harvard.edu/files/syang/files/gt2016-10-24.zip",
+download.file("https://zenodo.org/records/17681160/files/GT2016-10-24.zip",
 file.path(tempdir(), "gt2016-10-24.zip"))
 unzip(file.path(tempdir(), "gt2016-10-24.zip"), exdir = tempdir())
 gt.folder <- file.path(tempdir(), "2016-10-19")

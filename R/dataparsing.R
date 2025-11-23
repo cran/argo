@@ -48,17 +48,14 @@
 #'    Available online at \url{https://gis.cdc.gov/grasp/fluview/fluportaldashboard.html}
 #'  \item \code{ili_idx} the indexing information that includes the week number and year
 #'  number, the date of ending Saturday, and the season number
-#'    Available online at \url{https://www.cdc.gov/flu/weekly/}
+#'    Available online at \url{https://www.cdc.gov/fluview/index.html}
 #'  \item \code{ATH} Athenahealth data that includes the proportion of "Flu Visit",
 #'  "ILI Visit", and "Unspecified Viral or ILI Visit" compared to total number of visit to the
 #'  Athenahealth partner healthcare providers.
 #'  \item \code{ili_unrevised} Historical unrevised ILI activity level.
 #'    The unrevised ILI published on week ZZ of season XXXX-YYYY is available at
 #'    \code{www.cdc.gov/flu/weekly/weeklyarchivesXXXX-YYYY/data/senAllregtZZ.html}
-#'    or \code{.htm}. For example, original ILI report for week 7 of season 2015-2016 is available at
-#'    \url{https://www.cdc.gov/flu/weekly/weeklyarchives2015-2016/data/senAllregt07.html},
-#'    and original ILI report for week 50 of season 2012-2013 is available at
-#'    \url{https://www.cdc.gov/flu/weekly/weeklyarchives2012-2013/data/senAllregt50.htm}
+#'    or \code{.htm}. Historical data is also available at \url{https://github.com/cdcepi/FluSight-forecast-hub}.
 #' }
 #'
 #' @references
@@ -232,7 +229,7 @@ parse_unrevised_ili <- function(type = "extdata", ili.weighted=TRUE){
 #' @examples
 #'
 #' \donttest{
-#' download.file("https://scholar.harvard.edu/files/syang/files/gt2016-10-24.zip",
+#' download.file("https://zenodo.org/records/17681160/files/GT2016-10-24.zip",
 #' file.path(tempdir(), "gt2016-10-24.zip"))
 #' unzip(file.path(tempdir(), "gt2016-10-24.zip"), exdir = tempdir())
 #' gt.folder <- file.path(tempdir(), "2016-10-19")
@@ -339,7 +336,7 @@ gt.parser.pub.api <- function(gt.folder, f){
 #'
 #' @examples
 #' \donttest{
-#' download.file("https://scholar.harvard.edu/files/syang/files/gt2016-10-24.zip",
+#' download.file("https://zenodo.org/records/17681160/files/GT2016-10-24.zip",
 #' file.path(tempdir(), "gt2016-10-24.zip"))
 #' unzip(file.path(tempdir(), "gt2016-10-24.zip"), exdir = tempdir())
 #' gt.folder <- file.path(tempdir(), "2016-10-19")
